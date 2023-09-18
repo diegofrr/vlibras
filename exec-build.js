@@ -1,5 +1,6 @@
-const BUILD_URL = 'http://127.0.0.1:5501/app/vlibras-plugin.js'
+const BUILD_URL = 'https://diegofrr.github.io/vlibras/app/vlibras-plugin.js'
 const CONSOLE_STYLE = 'font-size: 32px; color: #ffc83d; font-weight: bold';
+const NEW_PLUGIN = false;
 
 root = ['[vp', '[vw', '.vpw-', '.vp-', '.vw-']
 
@@ -7,15 +8,18 @@ document.querySelectorAll('style').forEach(style => {
     if (root.some(i => style.textContent.includes(i))) style.remove();
 })
 
-fetch(BUILD_URL).then(r => r.text()).then(eval).then(remove);
+fetch(BUILD_URL).then(r => r.text()).then(eval).then(loadPlugin).then(remove)
 
 function loadPlugin() {
+    if (!NEW_PLUGIN) return;
     window.plugin = new window.VLibras.Plugin({
         rootPath: 'https://diegofrr.github.io/vlibras-widget-plus/app',
         wrapper: document.querySelector('[vw-plugin-wrapper]'),
         position: 'R',
         opacity: 1,
     });
+
+    addSetPersonalization();
 }
 
 function remove() {
@@ -25,6 +29,12 @@ function remove() {
             vw.removeAttribute('vw-access-button')
         }
     })
+}
+
+function addSetPersonalization() {
+    window.setPersonalization = (personalization) => {
+        window.plugin.player.setPersonalization(personalization)
+    }
 }
 
 const vwCount = document.querySelectorAll('[vw]').length;
