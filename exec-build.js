@@ -37,8 +37,12 @@ function addSetPersonalization() {
     }
 }
 
+function isLocalBuild() {
+    return Array.from(document.querySelectorAll('script'))
+        .some(({ src }) => src.includes('vlibras') && src.includes(location.hostname));
+}
+
 const vwCount = document.querySelectorAll('[vw]').length;
 if (vwCount > 1) console.log(`%c${vwCount} Widgets 😢`, CONSOLE_STYLE);
 
-const isLocal = Array.from(document.querySelectorAll('script')).some(script => script.src.includes('vlibras'));
-if (isLocal) console.log(`%cBuild local 😵`, CONSOLE_STYLE);
+if (isLocalBuild()) console.log(`%cBuild local 😵`, CONSOLE_STYLE);
