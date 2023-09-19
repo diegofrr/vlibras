@@ -40,5 +40,5 @@ function addSetPersonalization() {
 const vwCount = document.querySelectorAll('[vw]').length;
 if (vwCount > 1) console.log(`%c${vwCount} Widgets 😢`, CONSOLE_STYLE);
 
-const isLocal = document.querySelector('[vw]').innerHTML.includes(location.host);
+const isLocal = Array.from(document.querySelectorAll('script')).some(script => script.src.includes('vlibras'));
 if (isLocal) console.log(`%cBuild local 😵`, CONSOLE_STYLE);
