@@ -198,15 +198,14 @@
 
   <script src="vlibras-plugin.js"></script>
   <script>
-    new window.VLibras.Widget('', 'https://vlibras.gov.br/config/configs.json', '0.5');
-  </script>
-  <script>
-    const access = document.querySelector('[vw-access-button]');
-    access.addEventListener('click', () => {
-      window.setPersonalization = (personalization) => {
-        window.plugin.player.setPersonalization(personalization)
-      }
-    })
+    // new window.VLibras.Widget('', 'https://vlibras.gov.br/config/configs.json', '0.5', 'R');
+    new window.VLibras.Widget({
+      // rootPath: '',
+      personalization: '',
+      opacity: 0.5,
+      position: 'R',
+      avatar: 'random'
+    });
   </script>
 </body>
 
