@@ -6,7 +6,7 @@
 
 /*! exports provided: guideElements */
 
-/*! exports provided: isFullscreen, isPlaying, getAvatar, getWidgetPosition, getWidget, setWidgetPosition, $, $$, $0, hasClass, addClass, getDocumentDim, removeClass, toggleClass, getRect, addClickBlocker, canTranslate, toggleUnityMainLoop, _on, _off, _vwOn, _vwOff */
+/*! exports provided: isFullscreen, isPlaying, getAvatar, getWidgetPosition, formatGloss, getWidget, setWidgetPosition, $, $$, $0, hasClass, addClass, getDocumentDim, removeClass, toggleClass, getRect, addClickBlocker, canTranslate, toggleUnityMainLoop, _on, _off, _vwOn, _vwOff */
 
 /*! exports provided: loadTextCaptureScript */
 
