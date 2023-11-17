@@ -1,0 +1,5 @@
+/*! exports provided: loadTextCaptureScript */
+
+/*!************************************************************!*\
+  !*** ./widget/src/components/AccessButton/text-capture.js ***!
+  \************************************************************/

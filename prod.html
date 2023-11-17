@@ -193,6 +193,11 @@
     </div>
 
     <!-- WebPlayer Dependency -->
+
+
+
+
+
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -202,15 +207,16 @@
 
     <script src="https://www.vlibras.gov.br/doc/app/vlibras-plugin.js"></script>
     <script>
-        // new window.VLibras.Widget('', 'https://vlibras.gov.br/config/configs.json', '0.5', 'R');
         new window.VLibras.Widget({
-            rootPath: 'https://www.vlibras.gov.br/doc/app/',
-            personalization: 'https://vlibras.gov.br/config/configs.json',
-            opacity: 0.5,
-            position: 'R',
-            avatar: 'random'
+            rootPath: 'https://www.vlibras.gov.br/doc/app', // pasta /app
+            personalization: 'https://vlibras.gov.br/config/configs.json', // personalização
+            opacity: 0.5, // entre 0 e 1 (valor inválido seta pra 1)
+            position: 'R', // R, L, T, B, TL, TR, BL ou BR >>>>> TL = top-left, BR = bottom-right e etc.
+            avatar: 'random' // icaro, guga, hosana ou random
         });
     </script>
+
+
 </body>
 
 </html>
