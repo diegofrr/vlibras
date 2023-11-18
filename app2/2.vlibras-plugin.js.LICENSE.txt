@@ -1,5 +1,7 @@
-/*! exports provided: loadTextCaptureScript */
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
 
-/*!************************************************************!*\
-  !*** ./widget/src/components/AccessButton/text-capture.js ***!
-  \************************************************************/
+/*! nouislider - 8.5.1 - 2016-04-24 16:00:29 */
